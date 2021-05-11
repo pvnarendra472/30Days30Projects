@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="index.css" />
+    <h1>
+        Welcome to Drum Kit
+    </h1>
+
+</head>
+
+<body>
+    <div class=keys>
+        <div id="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">CLAP</span>
+        </div>
+        <div id="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">HIHAT</span>
+        </div>
+        <div id="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">KICK</span>
+        </div>
+        <div id="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">OPENHAT</span>
+        </div>
+        <div id="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">BOOM</span>
+        </div>
+        <div id="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">RIDE</span>
+        </div>
+        <div id="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">SNARE</span>
+        </div>
+        <div id="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">TOM</span>
+        </div>
+        <div id="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">TINK</span>
+        </div>
+
+    </div>
+    <audio id="keyA" src="./sounds/clap.wav"></audio>
+    <audio id="keyS" src="./sounds/hihat.wav"></audio>
+    <audio id="keyD" src="./sounds/kick.wav"></audio>
+    <audio id="keyF" src="./sounds/openhat.wav"></audio>
+    <audio id="keyG" src="./sounds/boom.wav"></audio>
+    <audio id="keyH" src="./sounds/ride.wav"></audio>
+    <audio id="keyJ" src="./sounds/snare.wav"></audio>
+    <audio id="keyK" src="./sounds/tom.wav"></audio>
+    <audio id="keyL" src="./sounds/tink.wav"></audio>
+</body>
+<script>
+   
+
+    document.addEventListener('keydown', function (e) {
+       // console.log(e);
+        document.getElementById(e.keyCode.toString()).classList.add("playing");
+
+        if (e.keyCode == 65) {
+            document.getElementById("keyA").currentTime=0;
+            document.getElementById("keyA").play();      
+        }
+        if (e.keyCode == 83) {
+            document.getElementById("keyS").currentTime=0;
+            document.getElementById("keyS").play();
+        }
+        if (e.keyCode == 68) {
+            document.getElementById("keyD").currentTime=0;
+            document.getElementById("keyD").play();
+        }
+        if (e.keyCode == 70) {
+            document.getElementById("keyF").currentTime=0;
+            document.getElementById("keyF").play();
+        }
+        if (e.keyCode == 71) {
+            document.getElementById("keyG").currentTime=0;
+            document.getElementById("keyG").play();
+        }
+        if (e.keyCode == 72) {
+            document.getElementById("keyH").currentTime=0;
+            document.getElementById("keyH").play();
+        }
+        if (e.keyCode == 74) {
+            document.getElementById("keyJ").currentTime=0;
+            document.getElementById("keyJ").play();
+        }
+        if (e.keyCode == 75) {
+            document.getElementById("keyK").currentTime=0;
+            document.getElementById("keyK").play();
+        }
+        if (e.keyCode == 76) {
+            document.getElementById("keyL").currentTime=0;
+            document.getElementById("keyL").play();
+        }
+
+    });
+
+    
+    document.addEventListener('keyup', function (e) {
+        console.log(e);
+        console.log(document.getElementById(e.keyCode.toString()).classList);
+        document.getElementById(e.keyCode.toString()).classList.remove("playing");
+        console.log(document.getElementById(e.keyCode.toString()).classList);
+    });
+
+    
+</script>
+
+</html>

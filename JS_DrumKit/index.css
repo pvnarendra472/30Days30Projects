@@ -1,0 +1,26 @@
+.keys{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;;
+}
+
+.key{
+    border: 2px solid black;
+    display: inline-block;
+    font-size: 48px;
+    padding: 10mm;
+    background-color: bisque;
+}
+
+.sound{
+    display: block;
+    font-size: 18px;
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+  }
+  
